@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+
+    <div class="site-wrapper">
+
+        <header class="header-container" id="header-section">
+    
+            <!-- Header left -->
+            <a href="" class="logolink headerleft">
+                <img src="assets/lumina.svg" alt="Logo Image" class="logo-img" id="logo-img">
+            </a>
+    
+            <!-- Header center -->
+            <form action="" class="search-bar headercenter box" id="search-bar">
+                <input type="search" class="search-input" placeholder="Search Here">
+    
+                <button class="search-button">
+                    <img src="assets/search-icon.svg" alt="Search Button" class="search-icon">
+                </button>
+            </form>
+    
+            <!-- header right -->
+            <nav class="nav-bar headerright box">
+    
+                <button class="nav-button" id="nav-button">
+                    <img src="assets/nav-icon.svg" alt="Hamburger Icon" class="menu-icon">
+                    <img src="assets/nav-close-icon.svg" alt="Menu Close Icon" class="menu-close-icon">
+                </button>
+    
+                <ul class="nav-list box" id="nav-list">
+                    <li class="nav-items"><a href="#" class="nav-link">Dashboard</a></li>
+                    <li class="nav-items"><a href="#" class="nav-link">AI Generator</a></li>
+                    <li class="nav-items"><a href="#" class="nav-link">Billing & Plans</a></li>
+                    <li class="nav-items"><a href="#" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>    
+    
+        </header>
+    
+    
+        <main>
+            <section class="hero-section" id="hero-section">
+                <article class="metric-card">
+                    <h3 class="card-label">Monthly Recurring Revenue</h3>
+                    <p class="card-value">&#8377;12,05,600</p>
+                    <p class="card-subtext">+19% from last month</p>
+                </article>
+                <article class="metric-card">
+                    <h3 class="card-label">AI Words Generated</h3>
+                    <p class="card-value">342,700</p>
+                    <p class="card-subtext">91% of monthly server limit</p>
+                </article>
+                <article class="metric-card">
+                    <h3 class="card-label">Active Subscribers</h3>
+                    <p class="card-value">1,212</p>
+                    <p class="card-subtext">24 joined today</p>
+                </article>
+                <article class="metric-card">
+                    <h3 class="card-label">API Server Status</h3>
+                    <p class="card-value" id="server-status">Operational</p>
+                </article>
+
+                <!-- Card 4 (System Health):**
+                    - Label: `API Server Status`
+                    - Value: `Operational`
+                    - *Tip: Use a `::before` pseudo-element here to draw a small green blinking circle next to the word Operational! -->
+
+            </section>
+
+            <section class="mid-section" id="mid-section">
+
+                
+                
+                <!-- TABLE SECTION -->
+                <div class="mid-section-items">
+
+                    <!-- HEadings -->
+                    <h2 class="mid-section-heading">Recent Transactions</h2>
+
+                    <div class="table-section">
+
+                        <!-- heading -->
+                        <table class="table-box">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Plan</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>royal@design.com</td>
+                                    <td>Pro Plan</td>
+                                    <td>&#8377;290</td>
+                                    <td class="status-success">Success</td>
+                                </tr>
+                                <tr>
+                                    <td>company_xyz@tech.io</td>
+                                    <td>Enterprise</td>
+                                    <td>&#8377;2999</td>
+                                    <td class="status-success">Success</td>
+                                </tr>
+                                <tr>
+                                    <td>lodha@gmail.com</td>
+                                    <td>Pro Plan</td>
+                                    <td>&#8377;290</td>
+                                    <td class="status-failed">Failed</td>
+                                </tr>
+                                <tr>
+                                    <td>vikramrathod@co.in</td>
+                                    <td>Pro Plan</td>
+                                    <td>&#8377;290</td>
+                                    <td class="status-success">Success</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- FORM SECTION -->
+                <div class="mid-section-items">
+
+                    <!-- Headings -->
+                    <h2 class="mid-section-heading">Profile & Billing Settings</h2>
+
+                    <div class="form-section">
+    
+                        <h3 class="form-heading">Account Settings</h3>
+    
+                        <form action="" class="form-box">
+    
+                            <!-- Normla inputs -->
+                            <label for="company-name">Company Name</label>
+                            <input type="text" placeholder="eg. Lumina Creative Agency" id="company-name" class="input-field">
+    
+                            <label for="email-address">Billing Email Address</label>
+                            <input type="email" placeholder="eg. billing@lumina.ai" id="email-address" class="input-field">
+    
+                            <!-- DROP DOWN-using <select> & <option> -->
+                            <label for="subscription-dropdown">Current Subscription Tier</label>
+                            <select name="subscription-tier" id="subscription-dropdown">
+                                <option value="" selected disabled>Choose Option</option>
+                                <option value="free">Free Tier (&#8377;0/mo)</option>
+                                <option value="pro">Pro Workspace (&#8377;299/mo)</option>
+                                <option value="enterprise">Enterprise Scaling (&#8377;2999/mo)</option>
+                            </select>
+
+                            <!-- as check box ignore parent align properties, so wrapper used -->
+                            <div class="check-box-row">
+
+                                <input type="checkbox" id="send-email" name="send-email" class="check-box-input">
+                                <label for="send-email" class="check-box-label">Send me email alerts when server usage exceeds 80%</label>
+
+
+                            </div>
+    
+                            
+                            <button id="submit-button">Save Workspace Changes</button>
+                        
+    
+                        </form>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+
+
+        <footer class="footer-area" id="footer-area">
+            <p class="footer-left">System Status: All Services Normal</p>
+            <p class="footer-center">v2.4.1-stable</p>
+            <div class="footer-right">
+                <a href="#header-section" class="footer-link">Privacy Policy</a>
+                <a href="#header-section" class="footer-link">Terms of Service</a>
+                <a href="#header-section" class="footer-link">Contact Support</a>
+            </div>
+
+
+            <!-- This sits at the absolute bottom of your page inside the `<footer>` tag.
+• **Left Text:** `System Status: All Services Normal`
+• **Center Text:** `v2.4.1-stable`
+• **Right Links (Flexbox Row):** `Privacy Policy` | `Terms of Service` | `Contact Support` -->
+        </footer>
+    </div>
+
+
+    <script>
+
+        const navButton = document.getElementById('nav-button');
+        const navList = document.querySelector('.nav-list');
+    
+
+        navButton.addEventListener('click', ()=>{
+            navList.classList.toggle('isopen');
+
+            // menu icon
+            navButton.classList.toggle('menuopen');
+
+            // to stop scrolling when navlist open
+            document.body.classList.toggle('no-scroll');
+            
+        });
+
+
+
+
+
+        // 1. Select ALL your navigation links at once
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // 2. Loop through each link to listen for clicks
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Optional: stops page from jumping if href="#"
+                event.preventDefault(); 
+
+                // 1: Find the old active link and strip its class away
+                const currentActive = document.querySelector('.nav-link.active');
+                if (currentActive) {
+                    currentActive.classList.remove('active');
+                }
+
+                // 2: Add the active class to the link that was just clicked!
+                link.classList.add('active');
+            });
+        });
+
+
+    </script>
+
+
+</body>
+</html>
